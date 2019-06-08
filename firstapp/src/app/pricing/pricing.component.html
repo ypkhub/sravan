@@ -1,0 +1,15 @@
+<p>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+</p>
+
+<p *ngFor="let names of serverArray;" [ngStyle]="{color:getColor}">
+{{names}}
+</p>
+
+<input type="button"  class="btn btn-primary" value="click" (click)="getresult()">
+
+
+<p *ngIf="serverCreated">
+  {{inputname}}
+</p>
+<input type="button"  class="btn btn-primary" value="click" (click)="getresult2()">

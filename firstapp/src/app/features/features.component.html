@@ -1,0 +1,22 @@
+<h3>Hadoop Image</h3>
+<img src="../../assets/hadoop.png" alt="" width="100px" height="100px">
+<p>server id is {{serverId}} Name is {{serverName}} </p>
+<p [innerText]='serverName'></p>
+<p>{{candidateName}}</p>
+
+<p *ngIf="serverCreated;else noServer">{{currentStatus}}</p>
+
+
+<input type="button" [disabled]='allownewUser' class="btn btn-primary" value="click" (click)="getresult()">
+ <br><br>
+ <p>{{projectName}}</p>
+
+ <p>
+    <input type="text" class="form-control" [(ngModel)]="serverName" />
+  </p>
+
+  <p [ngClass]="{online:serverStatus==='Online'}" [ngStyle]="{backgroundColor:getserverColor()}">
+        sever status is {{getserverColor()}}
+  </p>
+
+<input type="text" (input)="whenOnkeyUp($event)">

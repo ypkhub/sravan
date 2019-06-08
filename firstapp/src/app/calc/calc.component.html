@@ -1,0 +1,11 @@
+<p>
+  <input type="text" class="form-control" [(ngModel)]="inputNumber" />
+</p>
+<p>
+  <input type="text" class="form-control" [(ngModel)]="inputNumber2" />
+</p>
+<p>
+  {{result}}
+</p>
+<input type="button" class="btn btn-primary" (click)="getResult('+')" value="+"><br>
+<input type="button" class="btn btn-primary" (click)="getResult('-')" value="-">
